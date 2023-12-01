@@ -9,7 +9,7 @@ document.body.append(mainDiv);
 mainDiv.classList.add("container");
 
 let secDev = document.createElement("div");
-secDev.classList.add("d-flex", "justify-content-center");
+secDev.classList.add("secDev");
 mainDiv.append(secDev);
 
 let carDict = `<div class="card" style="width: 18rem;">
