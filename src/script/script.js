@@ -35,7 +35,8 @@ catchBtn.addEventListener('click',() => {
     wordInput.innerHTML = "Invalid input: Please enter a non-empty and non-numeric value"
     setTimeout(()=>{
       wordInput.innerHTML = "";
-    },2000)
+      inputDict.value = "";
+    },3000)
   } else {
     getData(inputDictV);
   }
