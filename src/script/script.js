@@ -14,6 +14,7 @@ mainDiv.append(secDev);
 
 let carDict = `<div class="card" style="width: 18rem;">
 <div class="card-body">
+<div>English Dictionary</div>
   <input id="inputDict" type="text" name="dist" placeholder="Type a word">
   <div id="wordInput">
 
@@ -36,7 +37,6 @@ catchBtn.addEventListener('click',() => {
       wordInput.innerHTML = "";
     },2000)
   } else {
-    console.log("Input Value:", inputDictV);
     getData(inputDictV);
   }
 });
@@ -65,6 +65,11 @@ let getData = async (word) => {
 
   } catch (error) {
     console.error('Error during data fetch:', error.message);
+    wordInput.innerHTML = `No data or meanings found for the word.`;
+    setTimeout(()=>{
+      wordInput.innerHTML = "";
+      inputDict.value = "";
+    },3000)
   }
 };
 
